@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dashboard</title>
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<DIV style="position: absolute; top:20px; left:1150px; width:200px; height:25px">Welcome {{user_name}} | <a href="/accounts/logout">Logout</a></DIV>
+<h3>You will find your records here!</h3>
+<br>
+<b><p>Add a new record<p></p></b>
+<form action="" method="post">{% csrf_token %}
+{{add_form}}
+<input type="submit" value="Add" name="add">
+</form>
+<br><br><br><br>
+<table style="width:30%">
+<tr>
+    <th>Company Code</th>
+    <th>Target Price</th>
+    <th>Delete</th>
+</tr>
+{% for stock_name in stock_names %}
+    <tr>
+    <td>{{ stock_name.company_code }}</td>
+    <td>{{ stock_name.target_price }}</td>
+    <td><a href = "delete/{{stock_name.id}}/">Delete</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

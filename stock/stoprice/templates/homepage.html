@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="{% static 'stoprice/style.css' %}"/>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+	<div id="container">
+		
+		<div id="header">
+			<h1> Welcome to my Stock Application</h1>
+		</div>
+		
+		<div id="content">
+			<h2> Let's get started!</h2>
+			<ul>
+				<li><a href="/accounts/google/login"><img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png"></a> 
+				<li><a href="http://127.0.0.1:8000/accounts/facebook/login/?process=login"><img src="http://i.stack.imgur.com/Vk9SO.png"></a>
+		</div>
+	</div>
+
+</body>
+</html>

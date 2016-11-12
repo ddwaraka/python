@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="" method="post">{% csrf_token %}
+
+    Task Name:<input type="text" name="task_name"><br><br>
+
+    Task Priority:<select name="task_priority">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option><br><br>
+        </select><br><br>
+
+    Task Status:<select name="task_status">
+        <option value="Completed">Completed</option>
+        <option value="Incomplete">Incomplete</option>
+    </select><br><br>
+
+    Target Date: <input type="date" name="target_date">
+    <input type="submit" value="Add">
+
+</form>
+
+
+
+</body>
+</html>

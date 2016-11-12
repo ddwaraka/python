@@ -1,0 +1,36 @@
+class CustomList():
+    int items[] = new int(10)
+
+
+    function_add_item(int item):
+        int i =0
+      
+      
+        for (i=0,  i<10; i++){
+            if items[i] == null
+                break
+        items[i] = item
+
+
+    function_remove_item(int item):
+        
+        index = search(item)
+			array[index] = array[index+1]
+               
+     
+     
+    function_search(item):
+	    for (k=0; k<10; k++)
+		    if items[k] == item:
+			    return k
+	
+	
+	function_print_list:
+	    for (l=0; l<10; l++)
+		    print items[l]
+ 
+                 
+
+
+       
+#Add, remove, search (item, returns index), print list

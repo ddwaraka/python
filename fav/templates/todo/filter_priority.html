@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter</title>
+</head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+</style>
+<body>
+{% if task_list %}
+<table style="width:30%">
+
+        <tr>
+            <th>Task Name</th>
+            <th>Task Priority</th>
+            <th>Status</th>
+            <th>Date</th>
+
+        </tr>
+        {% for task in task_list %}
+    <tr>
+            <td>{{ task.task_name }}</td>
+            <td>{{ task.task_priority }}</td>
+            <td>{{ task.task_status }}</td>
+            <td>{{ task.target_date }}</td>
+        </tr>
+        {% endfor %}
+</table>
+{% else %}
+<p> No tasks found matching "{{task_pri}}"</p>
+{% endif %}
+<br>
+<a href="/">Go Home</a>
+</body>
+</html>
